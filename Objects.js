@@ -54,3 +54,15 @@ console.log(createMyObject()); */
 // };
 // const result = keyDeleter(sampleObj);
 // console.log(result);
+
+/* function makeStudentsReport(data) {
+  let result = [];
+  for (let i = 0; i < data.length; i++) {
+    result.push(`${data[i].name}: ${data[i].grade}`);
+  }
+  return result;
+}
+
+let test = [{name: 'Johnny Robot', grade: 'C'}];
+
+console.log(makeStudentsReport(test)); */
