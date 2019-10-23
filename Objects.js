@@ -213,33 +213,55 @@ function displayJobArray(ary) {
 }
 displayJobArray(jobArray); */
 
-const objOne = {
-  name: 'Sherlock',
-  jobTitle: 'Detective',
-  boss: 'Cuddy'
-}
+// const objOne = {
+//   name: 'Sherlock',
+//   jobTitle: 'Detective',
+//   boss: 'Cuddy'
+// }
 
-const objTwo = {
-  name: 'House',
-  jobTitle: 'Doctor',
-  boss: 'Cuddy'
-}
+// const objTwo = {
+//   name: 'House',
+//   jobTitle: 'Doctor',
+//   boss: 'Cuddy'
+// }
 
-const objThree = {
-  name: 'Cuddy',
-  jobTitle: 'Medical Director'
-}
+// const objThree = {
+//   name: 'Cuddy',
+//   jobTitle: 'Medical Director'
+// }
 
-let jobArray = [objOne, objTwo, objThree]
+// let jobArray = [objOne, objTwo, objThree]
 
-function boss(jobs) {
-  for (let i = 0; i < jobs.length; i ++) {
-    if (jobs[i].boss === undefined) {
-      console.log(`${jobs[i].jobTitle} ${jobs[i].name} doesn't report to anybody`)}
-    else  {
-      console.log(`${jobs[i].jobTitle} ${jobs[i].name} reports to ${jobs[i].boss}`)}
+// function boss(jobs) {
+//   for (let i = 0; i < jobs.length; i ++) {
+//     if (jobs[i].boss === undefined) {
+//       console.log(`${jobs[i].jobTitle} ${jobs[i].name} doesn't report to anybody`)}
+//     else  {
+//       console.log(`${jobs[i].jobTitle} ${jobs[i].name} reports to ${jobs[i].boss}`)}
     
-  }
-}
+//   }
+// }
+// boss(jobArray);
 
-boss(jobArray);
+const cipher = {
+  a: 2,
+  b: 3,
+  c: 4,
+  d: 5
+};
+
+function decodeWords(words, object) {
+  let newArray = [];
+  newArray.push(words.split(' '));
+  for (let key in object) {
+    if (Object.keys(object) === newArray.charAt[0]) {
+      return newArray.charAt[object[key]];
+    }
+  }
+  return newArray;
+}
+let sampleString = 'craft block argon meter bells brown croon droop';
+let result = decodeWords(sampleString, cipher);
+console.log(result);
+
+//'craft block argon meter bells brown croon droop'.
