@@ -67,44 +67,93 @@ let test = [{name: 'Johnny Robot', grade: 'C'}];
 
 console.log(makeStudentsReport(test)); */
 
-const studentData = [
-  {
-    name: 'Tim',
-    status: 'Current student',
-    course: 'Biology',
-  },
-  {
-    name: 'Sue',
-    status: 'Withdrawn',
-    course: 'Mathematics',
-  },
-  {
-    name: 'Liz',
-    status: 'On leave',
-    course: 'Computer science',
-  },
-];
+// const studentData = [
+//   {
+//     name: 'Tim',
+//     status: 'Current student',
+//     course: 'Biology',
+//   },
+//   {
+//     name: 'Sue',
+//     status: 'Withdrawn',
+//     course: 'Mathematics',
+//   },
+//   {
+//     name: 'Liz',
+//     status: 'On leave',
+//     course: 'Computer science',
+//   },
+// ];
 
-function enrollInSummerSchool(students) {
-  let result = students.map(student => {
-    student.name;
-    student.course;
-    student.status = 'In Summer School'; 
-  });
-  return result; 
-}
+// function enrollInSummerSchool(students) {
+//   let result = students.map(student => {
+//     student.name = student.name;
+//     student.course = student.course;
+//     student.status = 'In Summer School'
+//   });
+//  return result;
+// }
   
-//console.log(enrollInSummerSchool(studentData));//
+// console.log(enrollInSummerSchool(studentData));//
 
-function reenrollInSummerSchool(students) {
-  let answer = [];
-  for (let i = 0; i < students.length; i++) {
-    answer.push({
-      name: students[i].name,
-      course: students[i].course,
-      status: 'In Summer School'
-    });
-    return answer;
-  }
-  console.log(answer);
+// function reenrollInSummerSchool(students) {
+//   let answer = [];
+//   for (let i = 0; i < students.length; i++) {
+//     answer.push({
+//       name: students[i].name,
+//       course: students[i].course,
+//       status: 'In Summer School'
+//     });
+//   }
+//   return answer;
+// };
+// const result = reenrollInSummerSchool(studentData);
+// console.log(result);
+
+//find by id
+// const scratchData = [
+//   { id: 22, foo: 'bar' },
+//   { id: 28, foo: 'bizz' },
+//   { id: 19, foo: 'bazz' },
+// ];
+
+// function findById(items, idNum) {
+//   for (let i = 0; i < items.length; i++) {
+//     if (items[i].id === idNum) {
+//       return items[i];
+//     }
+//   }
+// }
+// let result = findById(scratchData, 28);
+// console.log(result);
+
+//validate keys
+const objectA = {
+  id: 2,
+  person: 'Jane Doe',
+  age: 34,
+  city: 'Chicago',
 };
+
+// running the function with `objectB` and `expectedKeys`
+// should return `false`
+const objectB = {
+  id: 3,
+  age: 33,
+  city: 'Peoria',
+};
+
+const expectedKeys = ['id', 'name', 'age', 'city'];
+
+function validateKeys(object, expectedKeys) {
+  
+  if (Object.keys(object).length !== expectedKeys.length) {
+    return false;
+  }
+  for (let i = 0; i < object.length; i++) {
+    Object.keys(object).every(items => expectedKeys.includes(items));
+  };
+  return true;
+};
+let result = validateKeys(objectA, expectedKeys);
+console.log(result);
