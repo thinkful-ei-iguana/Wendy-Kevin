@@ -128,7 +128,7 @@ console.log(makeStudentsReport(test)); */
 // console.log(result);
 
 //validate keys
-const objectA = {
+/*const objectA = {
   id: 2,
   name: 'Jane Doe',
   age: 34,
@@ -155,4 +155,91 @@ function validateKeys(object, expectedKeys) {
 }
 
 let result = validateKeys(objectA, expectedKeys);
-console.log(result);
+console.log(result); */
+
+/*const loaf = {
+  flour: 300,
+  water: 210,
+  hydration() {
+    return (this.water / this.flour) * 100
+  }
+};
+
+console.log(loaf);
+
+console.log(loaf.hydration()); */
+
+/* const myObj = {
+  foo: 'ice',
+  bar: 'mice',
+  fum: 'dice',
+  quux: 'rice',
+  spam: 'spice'
+}
+
+function loopMyObj(argument) {
+  for (let key in argument) {
+    console.log(`${key}: ${argument[key]}`);
+  }
+}
+loopMyObj(myObj); */
+
+/*
+const food = {
+  meals: ['breakfast', 'second breakfast','elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
+}
+
+console.log(food.meals[3]); */
+
+/* const objOne = {
+  name: 'Sherlock',
+  jobTitle: 'Detective'
+}
+
+const objTwo = {
+  name: 'House',
+  jobTitle: 'Doctor'
+}
+
+const objThree = {
+  name: 'Cuddy',
+  jobTitle: 'Medical Director'
+}
+
+let jobArray = [objOne, objTwo, objThree]
+
+function displayJobArray(ary) {
+  ary.forEach(element => console.log(element))
+}
+displayJobArray(jobArray); */
+
+const objOne = {
+  name: 'Sherlock',
+  jobTitle: 'Detective',
+  boss: 'Cuddy'
+}
+
+const objTwo = {
+  name: 'House',
+  jobTitle: 'Doctor',
+  boss: 'Cuddy'
+}
+
+const objThree = {
+  name: 'Cuddy',
+  jobTitle: 'Medical Director'
+}
+
+let jobArray = [objOne, objTwo, objThree]
+
+function boss(jobs) {
+  for (let i = 0; i < jobs.length; i ++) {
+    if (jobs[i].boss === undefined) {
+      console.log(`${jobs[i].jobTitle} ${jobs[i].name} doesn't report to anybody`)}
+    else  {
+      console.log(`${jobs[i].jobTitle} ${jobs[i].name} reports to ${jobs[i].boss}`)}
+    
+  }
+}
+
+boss(jobArray);
