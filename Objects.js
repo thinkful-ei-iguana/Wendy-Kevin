@@ -130,7 +130,7 @@ console.log(makeStudentsReport(test)); */
 //validate keys
 const objectA = {
   id: 2,
-  person: 'Jane Doe',
+  name: 'Jane Doe',
   age: 34,
   city: 'Chicago',
 };
@@ -146,14 +146,13 @@ const objectB = {
 const expectedKeys = ['id', 'name', 'age', 'city'];
 
 function validateKeys(object, expectedKeys) {
-  
-  if (Object.keys(object).length !== expectedKeys.length) {
+  const keys = Object.keys(object);
+  if (keys.length !== expectedKeys.length) {
     return false;
   }
-  for (let i = 0; i < object.length; i++) {
-    Object.keys(object).every(items => expectedKeys.includes(items));
-  };
-  return true;
-};
+  const value = keys.every(items => expectedKeys.includes(items));
+  return value;
+}
+
 let result = validateKeys(objectA, expectedKeys);
 console.log(result);
