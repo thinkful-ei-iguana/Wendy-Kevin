@@ -66,3 +66,45 @@ console.log(createMyObject()); */
 let test = [{name: 'Johnny Robot', grade: 'C'}];
 
 console.log(makeStudentsReport(test)); */
+
+const studentData = [
+  {
+    name: 'Tim',
+    status: 'Current student',
+    course: 'Biology',
+  },
+  {
+    name: 'Sue',
+    status: 'Withdrawn',
+    course: 'Mathematics',
+  },
+  {
+    name: 'Liz',
+    status: 'On leave',
+    course: 'Computer science',
+  },
+];
+
+function enrollInSummerSchool(students) {
+  let result = students.map(student => {
+    student.name;
+    student.course;
+    student.status = 'In Summer School'; 
+  });
+  return result; 
+}
+  
+//console.log(enrollInSummerSchool(studentData));//
+
+function reenrollInSummerSchool(students) {
+  let answer = [];
+  for (let i = 0; i < students.length; i++) {
+    answer.push({
+      name: students[i].name,
+      course: students[i].course,
+      status: 'In Summer School'
+    });
+    return answer;
+  }
+  console.log(answer);
+};
