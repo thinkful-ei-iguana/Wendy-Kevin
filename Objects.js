@@ -251,17 +251,35 @@ const cipher = {
 };
 
 function decodeWords(words, object) {
-  let newArray = [];
-  newArray.push(words.split(' '));
-  for (let key in object) {
-    if (Object.keys(object) === newArray.charAt[0]) {
-      return newArray.charAt[object[key]];
-    }
-  }
-  return newArray;
+  let newArray = words.split(' ');
+  const mappedAry = newArray.map(word => {
+    return object[word.charAt(0)] + word.substring(1);
+  })
+  return mappedAry;
 }
 let sampleString = 'craft block argon meter bells brown croon droop';
 let result = decodeWords(sampleString, cipher);
 console.log(result);
 
 //'craft block argon meter bells brown croon droop'.
+
+/*function decode(word) {
+  switch (word[0]) {
+      case 'a':
+          console.log(word[1]);
+          break;
+      case 'b':
+          console.log(word[2]);
+          break;
+      case 'c':
+          console.log(word[3]);
+          break;
+      case 'd':
+          console.log(word[4]);
+          break;
+      default:
+          console.log(' ');
+  }
+}
+const result = `${decode('craft')}${decode('block')}${decode('argon')}${decode('meter')}${decode('bells')}${decode('brown')}${decode('croon')}${decode('droop')}`;
+console.log(result); */
